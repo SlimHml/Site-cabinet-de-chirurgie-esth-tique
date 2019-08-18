@@ -11,49 +11,251 @@
     "footer footer footer"
 }
 
-.head
+body
 {
-    grid-area: head;
-    background-color: red;
+    background-image: url(images/backgroundimage.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header
+{
+    width: 80%;
+    grid-area: header;
+}
+
+.logo > .logodesktop
+{
+    width: 20rem;
+    height: 15rem;
 }
 
 .navigation ul
 {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: black;
+    font-size: 1.3rem;
     margin-right: 10rem;
     margin-bottom: 10rem;
     margin-top: -8rem;
-    margin-left: 20rem;
-    width: 55rem;
+    margin-left: 23rem;
+    width: 45rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     list-style: none;
-    border: black solid 3px;
+    border: ridge wheat 1px;
+    border-radius: 8px;
+}
+
+.navigation a
+{
+    text-decoration: none;
+    color:white;
+}
+
+.navigation a:hover
+{
+    color: gold;
 }
 
 .main
 {
+    border: white solid 1px;
+    border-radius: 8px;
+    width: 88%;
     grid-area: main;
-    background-color: black;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.3rem;
+    color: ivory;
+}
+
+.main > .bannerdesktop
+{
+    
+}
+
+.main > .contacth1
+{
+    text-decoration: underline;
+    text-align: center;
+}
+
+.main > .horairescarpentier, .horairesstrauss, .horairessecretariat
+{
+    text-decoration: underline;
+}
+
+.biocarp > .photocarpbio
+{
+    float: left;
+    width: 10rem;
+    height: 10rem;
+}
+
+.main > .bannerdesktop
+{
+    width: 100%;
+}
+
+.main > .plan img
+{
+    height: 20rem;
+    width: 30rem;
+    margin-left: 18rem;
+    margin-top: -5rem;
+}
+
+.main > a
+{
+    text-decoration: underline;
+    color: lightseagreen;
+}
+
+.main > a:hover
+{
+    color: gold;
 }
 
 .footer
 {
     grid-area: footer;
-    background-color: blue;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.8rem;
+    color: beige;
 }
 
-.logo
+.drcarplink .drstrausslink
 {
-    width: 20rem;
-    border: black solid 2px;
+    margin-top: -5rem;
 }
 
 .footercarp, .footerstrauss
 {
-    margin-left: 15%;
+    margin-left: 10rem;
+    border:wheat solid 2px;
+    border-radius: 8px;
+    height: 11.5rem;
+    width: 11.5rem;
+}
+
+.footer > .liencarp, .lienstrauss
+{
+    background-color: black;
+    border: ridge wheat 1px;
+    border-radius: 8px;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: azure;
+    width: 2rem;
+}
+
+.numerofooter
+{
+    text-decoration: none;
+    color: lightseagreen;
+}
+
+.numerofooter:hover
+{
+    color: gold;
+    text-decoration: underline;
+}
+
+/*====================================MEDIA QUERIES===================================*/
+
+@media screen and (max-width: 800px)
+
+{
+
+.hamburger
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.hamburger input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0;
+  z-index: 2; 
+  
+  -webkit-touch-callout: none;
+}
+
+
+
+.hamburger span
+{
+  display: block;
+  width: 9vw;
+  height: .6vh;
+  margin-bottom: 20%;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+.hamburger span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+.hamburger span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+
+
+.hamburger input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+
+.hamburger input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+
+.hamburger input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+.hamburger input:checked ~ ul
+{
+  transform: none;
+}
+
 }
