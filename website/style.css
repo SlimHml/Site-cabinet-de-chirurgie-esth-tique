@@ -1,4 +1,59 @@
-body
+.all
 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: minmax(100px, auto);
+    grid-gap: 10px;
+    grid-template-areas:
+    "head head head"
+    "main main main"
+    "main main main"
+    "footer footer footer"
+}
+
+.head
+{
+    grid-area: head;
     background-color: red;
+}
+
+.navigation ul
+{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+    margin-right: 10rem;
+    margin-bottom: 10rem;
+    margin-top: -8rem;
+    margin-left: 20rem;
+    width: 55rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    border: black solid 3px;
+}
+
+.main
+{
+    grid-area: main;
+    background-color: black;
+}
+
+.footer
+{
+    grid-area: footer;
+    background-color: blue;
+}
+
+.logo
+{
+    width: 20rem;
+    border: black solid 2px;
+}
+
+.footercarp, .footerstrauss
+{
+    margin-left: 15%;
 }
