@@ -11,6 +11,11 @@
     "footer footer footer"
 }
 
+.hamburger
+{
+    display: none;
+}
+
 body
 {
     background-image: url(images/backgroundimage.jpg);
@@ -68,6 +73,11 @@ body
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1.3rem;
     color: ivory;
+}
+
+.main > .photostraussbio
+{
+    float: left;
 }
 
 .main > .bannerdesktop
@@ -151,6 +161,13 @@ body
     width: 2rem;
 }
 
+#strausstocarp
+{
+    margin-left: 10rem;
+    height: 11.5rem;
+    width: 11.5rem;
+}
+
 .numerofooter
 {
     text-decoration: none;
@@ -168,6 +185,11 @@ body
 @media screen and (max-width: 800px)
 
 {
+
+.navigation
+{
+    display: none;
+}
 
 .hamburger
 {
